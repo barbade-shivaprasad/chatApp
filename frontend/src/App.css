@@ -1,0 +1,156 @@
+.container-2{
+    /* height: 100vh;
+    width: 100%; */
+    /* border: 2px solid black; */
+    width:218px;
+}
+#toast{
+    display: none;
+}
+.left{
+    width: 23vw;
+    border: 2px solid rgb(233, 232, 229);
+    height: 100vh;
+    padding: 5px;
+}
+.right{
+    width:75vw;
+    border: 2px solid rgb(233, 232, 229);
+    height: 100vh;
+    padding: 5px;
+}
+.main-container{
+    display: flex;
+
+}
+li{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#chatHead{
+    display: none;
+    text-align: center;
+}
+.sendMessage{
+    position: absolute;
+    bottom: 10px;
+    width: 74vw;
+    clear: right;
+    display: inline;
+}
+
+.message{
+    width: 100%;
+}
+small{
+    float: right;
+}
+
+.chat-container{
+    display: block;
+    /* border: 2px solid black; */
+    height: 86vh;
+    overflow: scroll;
+    display: none;
+}
+.me{
+    float: right;
+    clear: both;
+    min-width: 100px;
+    max-width: 45rem;
+    min-height: 3rem;
+    /* border: 2px solid black; */
+    /* padding-left: 10px; */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #aaafb9;
+    margin:10px;
+}
+.you{
+    /* float: left;
+    clear: left; */
+    clear: both;
+    min-width: 100px;
+    max-width: 45rem;
+    min-height: 3rem;
+    /* border: 2px solid black; */
+    /* padding-left: 10px; */
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #9fa8da;
+    margin:10px
+}
+.chat-container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .chat-container::-webkit-scrollbar-track{
+      width: 10px;
+  }
+   
+  .title{
+    margin-top: 50px;
+    height: 41px;
+    background-color: #d1c4e9;
+    padding: 10px;
+    padding-left: 20px;
+    /* font-weight: bold; */
+    color: #8e24aa;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    
+}
+.ul{
+    overflow: scroll;
+}
+.ul::-webkit-scrollba{
+    width: 10px;
+}
+.noChat{
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    font-size: 25px;
+    color: #9e9e9e;
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .sendMessage{
+        width: 97%;
+    }
+    .me{
+        
+        max-width: 20rem;
+        
+        /* overflow-clip-margin: 10px; */
+        word-break: break-all;
+    }
+    .you{
+        
+        max-width: 20rem;
+        
+        /* overflow-clip-margin: 10px; */
+        word-break: break-all;
+    }
+    .chat-container{
+        height: 79vh;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
