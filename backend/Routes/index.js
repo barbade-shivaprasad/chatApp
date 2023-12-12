@@ -16,10 +16,8 @@ class Test{
             res.send("success")
         }
         catch(err){
-
             console.log(err);
             res.status(202).send("Something went wrong/User already exists");
-
         }
     }
 

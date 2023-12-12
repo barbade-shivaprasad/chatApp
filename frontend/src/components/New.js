@@ -22,7 +22,7 @@ const New = () => {
         let email = document.querySelector('.email').value;
         let name = document.querySelector('.name').value;
         
-        let res = await axios.post('http://localhost:5000/newuser',{email:email,name:name})
+        let res = await axios.post('http://127.0.0.1:5000/newuser',{email:email,name:name})
         
         if(res.status === 200){
           setName(name);

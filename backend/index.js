@@ -13,11 +13,11 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(cors({ origin: '*', credentials: true }));
+app.use(cors({ origin: '*'}));
 
-mongoose.connect('mongodb+srv://Shiva:Rgukt123@cluster0.juncu.mongodb.net/chatapp?retryWrites=true&w=majority')
+// mongoose.connect('mongodb+srv://Shiva:Rgukt123@cluster0.juncu.mongodb.net/chatapp?retryWrites=true&w=majority')
 // mongoose.connect('mongodb://localhost:27017/chatapp')
-mongoose.connect('',()=>{
+mongoose.connect('mongodb+srv://Shiva:Rgukt123@cluster0.juncu.mongodb.net/chatapp?retryWrites=true&w=majority',()=>{
   console.log("connected")
 })
 
@@ -42,7 +42,6 @@ let io = new Server(server,{
 
 io.on('connection',(socket)=>{
   socket.on('connected',async(email)=>{
-      
     await userModel.updateOne({email:email},{socId:socket.id})
   })
 

@@ -33,7 +33,7 @@ const Old = () => {
       setProgress(75)
       let email = document.querySelector('.email').value;
       
-      let res = await axios.post('http://localhost:5000/old',{email:email})
+      let res = await axios.post('http://127.0.0.1:5000/old',{email:email})
       
 
       if(res.status === 200){

@@ -34,7 +34,7 @@ const Mobile = () => {
   const updateFriends = async () => {
     try {
       if (stateEmail != "") {
-        let res = await axios.post("http://localhost:5000/getfriends", {
+        let res = await axios.post("http://127.0.0.1:5000/getfriends", {
           email: stateEmail,
         });
         
@@ -94,7 +94,7 @@ const Mobile = () => {
       active(name+email);
       setProgress(80)
       
-      let res = await axios.post("http://localhost:5000/getchat", {
+      let res = await axios.post("http://127.0.0.1:5000/getchat", {
         email: stateEmail,
         remail: email,
       });
@@ -123,7 +123,7 @@ const Mobile = () => {
     try {
       let remail = e.target.querySelector("#addfriend-input").value;
       e.target.querySelector("#addfriend-input").value = "";
-      let res = await axios.post("http://localhost:5000/addfriend", {
+      let res = await axios.post("http://127.0.0.1:5000/addfriend", {
         email: stateEmail,
         remail: remail,
         name: stateName,
@@ -167,7 +167,7 @@ const Mobile = () => {
 
   // const getchat = async () => {
   //   try {
-  //     let res = await axios.post("http://localhost:5000/getchat", {
+  //     let res = await axios.post("http://127.0.0.1:5000/getchat", {
   //       email: state.email,
   //       remail: state.remail,
   //     });
@@ -199,14 +199,14 @@ const Mobile = () => {
         if(flag == 0)
         c = 1;
 
-        await axios.post("http://localhost:5000/updateCount", {
+        await axios.post("http://127.0.0.1:5000/updateCount", {
               email: stateEmail,
               remail: email,
               count: c,
             });
 
       } else
-        await axios.post("http://localhost:5000/updateCount", {
+        await axios.post("http://127.0.0.1:5000/updateCount", {
           email: stateEmail,
           remail: email,
           count: 0,
